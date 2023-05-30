@@ -1,0 +1,19 @@
+{
+  "name": "fundacja_slava_sd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SteeveTrader/fundacja_Slava_SD.git"
+  },  
+  "keywords": [],
+  "author": "Stepan Dumenko",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}
