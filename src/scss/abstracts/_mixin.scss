@@ -1,4 +1,4 @@
-@mixin flex ($justify-content: center, $align-items: center, $flex-direction: column) {
+@mixin flex ($justify-content: center, $align-items: center, $flex-direction: row) {
     display: flex;
     justify-content: $justify-content;
     align-items: $align-items;
@@ -18,6 +18,11 @@
 @mixin monserrat ($font-weight: 700) {
     font-family: 'Montserrat';
     font-weight: $font-weight;
+}
+
+@mixin minWidth {
+    min-width: 320px;
+    box-sizing: border-box;
 }
 
 
