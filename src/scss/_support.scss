@@ -1,0 +1,9 @@
+@import "../abstracts/mixin";
+@import "../abstracts/variables";
+
+.support {
+    @include minWidth;
+    box-sizing: border-box;
+    min-width: 320px;
+}
+

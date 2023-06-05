@@ -30,6 +30,18 @@
     }
 }
 
+.header__flex-container {
+    @include flex;
+    gap: 15px;
+}
+
+.header__language {
+    text-decoration: none;
+    @include monserrat(500);
+    color: $blue-color;
+    cursor: pointer;
+}
+
 .header__burger-menu {
     @include flex(center, center, column);
     gap: 2px;
@@ -123,8 +135,8 @@
 
     li {
         @include monserrat(400);
-        font-size: 11px;
-        line-height: 22px;
+        font-size: 16px;
+        line-height: 30px;
         letter-spacing: 1.1px;
         text-transform: uppercase;
         white-space: nowrap;
