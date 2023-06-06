@@ -1,0 +1,100 @@
+@import "../abstracts/mixin";
+@import "../abstracts/variables";
+
+.support {
+    @include minWidth;
+    box-sizing: border-box;
+}
+
+.support__title {
+    @include monserrat(700);
+    font-size: 25px;
+    line-height: 30px;
+    padding-top: 25px;
+}
+
+.support__cards {
+    @include grid;
+    grid-column-gap: 14px;
+    grid-row-gap: 18px;
+    grid-template-areas: 
+    "bank"
+    "title"
+    "card1"
+    "card2"
+    ;
+    padding: 25px 10px;
+}
+
+.support__cards-bank-account {
+    color: $main-color;
+    background: #588ED6;
+    grid-area: bank;
+
+    div:first-child {
+        @include monserrat(500);
+        font-size: 15px;
+        line-height: 19px;
+        padding: 25px 20px;
+    }
+
+    div:last-child {
+        @include monserrat(700);
+        font-size: 17px;
+        line-height: 23px;
+        padding-bottom: 20px;
+    }
+}
+
+.support__cards-title {
+    @include monserrat(700);
+    font-size: 17px;
+    line-height: 23px;
+    padding: 15px 0 15px;
+    background-color: #FFDF6B;
+    grid-area: title;
+    width: 100%;
+}
+
+.support__cards-item1,
+.support__cards-item2 {
+    background-color: #FFDF6B;
+    padding: 18px;
+    gap: 18px;
+
+    div:first-child {
+        @include monserrat(500);
+        font-size: 13px;
+        line-height: 17px;
+    }
+
+    div:last-child {
+        @include monserrat(700);
+        font-size: 14px;
+        line-height: 19px;
+    }
+}
+
+.support__cards-item1 {
+    grid-area: card1;
+}
+
+.support__cards-item2 {
+    grid-area: card2;
+}
+
+.support__title,
+.support__cards-title,
+.support__cards-item1,
+.support__cards-item2 {
+    color: $blue-color;
+}
+
+.support__title,
+.support__cards-bank-account,
+.support__cards-title,
+.support__cards-item1,
+.support__cards-item2 {
+    @include flex(center, center, column);
+    text-align: center;
+}
