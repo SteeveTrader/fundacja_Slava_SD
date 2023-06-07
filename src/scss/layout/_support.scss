@@ -16,7 +16,9 @@
 .support__cards {
     @include grid;
     grid-column-gap: 14px;
+    justify-content: center;
     grid-row-gap: 18px;
+    grid-template-columns: minmax(300px, 1fr);
     grid-template-areas: 
     "bank"
     "title"
@@ -30,6 +32,7 @@
     color: $main-color;
     background: #588ED6;
     grid-area: bank;
+
 
     div:first-child {
         @include monserrat(500);
@@ -53,14 +56,16 @@
     padding: 15px 0 15px;
     background-color: #FFDF6B;
     grid-area: title;
-    width: 100%;
+
 }
 
 .support__cards-item1,
 .support__cards-item2 {
+    box-sizing: border-box;
     background-color: #FFDF6B;
     padding: 18px;
     gap: 18px;
+
 
     div:first-child {
         @include monserrat(500);
@@ -97,4 +102,5 @@
 .support__cards-item2 {
     @include flex(center, center, column);
     text-align: center;
+    width: 100%;
 }
