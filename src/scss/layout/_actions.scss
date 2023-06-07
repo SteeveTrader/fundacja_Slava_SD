@@ -12,26 +12,83 @@
     @include monserrat(700);
     font-size: 25px;
     line-height: 30px;
-    padding: 30px 0 23px;
+    padding-top: 35;
+    color: $main-color;
 
+}
+
+.actions__card-container {
+    @include grid;
+    grid-row-gap: 15px;
+    grid-template-columns: 40px 1fr 40px;
+    grid-template-areas: 
+    "img img img"
+    "text text text"
+    "leftbtn loadbtn rightbtn"
+    ;
+    box-sizing: border-box;
+    padding: 35px 10px;
+
+}
+
+.actions__card-image {
+    grid-area: img;
+    max-width: 399px;
+    max-height: 100%;
+    width: 100%;
+    height: auto;
+    border-radius: 2px;
+}
+
+.actions__card-text {
+    @include flex(center, start, column);
+    @include monserrat(500);
+    gap: 16px;
+    font-size: 15px;
+    line-height: 18px;
+    color: $main-color;
+    grid-area: text;
+    max-width: 399px;
+
+    p:last-child {
+      opacity: 0.7;  
+    }
+}
+
+.actions__load-more-btn {
+    grid-area: loadbtn;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 16px 40px;
+    border-radius: 2px;
+    box-sizing: border-box;
+    background: #FFDF6B;
+    color: $blue-color;
+    font-size: 18px;
+    line-height: 20px;
+    @include monserrat(500);
 }
 
 
 
 .actions__previouse-btn {
-    font-weight: bold;
-    background: transparent;
-    border-radius: 5px;
-    padding: 14px 50px;
-    color: #fafafa;
-    border: 0;
-    height: 48px;
-    width: 48px;
+    grid-area: leftbtn;
+    cursor: pointer;
+    background: none;
+    border: none;
+    height: 50px;
+    width: 50px;
 }
 
 
 .actions__next-btn {
-
+    grid-area: rightbtn;
+    cursor: pointer;
+    background: none;
+    border: none;
+    height: 50px;
+    width: 50px;
 }
 
 

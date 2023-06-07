@@ -1,0 +1,17 @@
+@import "../abstracts/mixin";
+@import "../abstracts/variables";
+
+.partners {
+    @include minWidth;
+    box-sizing: border-box;
+    background: #FFDF6B;
+}
+
+.partners__title {
+    text-align: center;
+    @include monserrat(700);
+    font-size: 25px;
+    line-height: 30px;
+    padding-top: 35px;
+    color: $main-color;
+}
