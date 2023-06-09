@@ -1,0 +1,93 @@
+@import "../abstracts/mixin";
+@import "../abstracts/variables";
+
+.contact {
+    @include minWidth;
+    box-sizing: border-box;
+    background: $main-color;
+    padding: 35px 10px;
+
+    h3 {
+        text-align: center;
+        @include monserrat(700);
+        font-size: 25px;
+        line-height: 30px;
+        color: $blue-color;
+    }
+}
+
+.constact__form-container {
+    @include flex;
+    gap: 15px;
+    padding: 35px 0 35px;
+    img {
+        width: 25%;
+        height: 25%;
+    }
+
+}
+
+.contact__form-button,
+.contact__info-button {
+    cursor: pointer;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 2px;
+    box-sizing: border-box;
+    background: #FFDF6B;
+    
+    font-size: 18px;
+    line-height: 20px;
+    @include monserrat(500);
+
+    a {
+        color: $blue-color; 
+        text-decoration: none;        
+    }
+}
+
+.contact__title {
+    padding-bottom: 25px;
+}
+.contact__info-container {
+    @include grid(start);
+    grid-column-gap: 14px;
+    grid-row-gap: 10px;
+    grid-template-areas: 
+    "icons"
+    "btn"
+    "map"
+    ;
+}
+
+.contact__adress-icons {
+    grid-area: icons;
+}
+
+.contact__adress-icon {
+    @include flex(start, center);
+    gap: 15px;
+    padding-bottom: 10px;
+
+    p {
+        @include monserrat(500);
+        font-size: 14px;
+        line-height: 16px;
+        text-align: justify;
+        color: $blue-color;
+    }
+
+}
+
+.contact__info-button {
+    margin-bottom: 20px;
+    grid-area: btn;
+    cursor: pointer;
+}
+
+.contact__adress-map {
+    grid-area: map;
+    width: 300px;
+    height: 280px;
+    border: none;
+}

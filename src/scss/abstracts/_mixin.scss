@@ -5,9 +5,9 @@
     flex-direction: $flex-direction;
 }
 
-@mixin grid {
+@mixin grid ($place-items: center) {
     display: grid;
-    place-items: center;
+    place-items: $place-items;
 }
 
 

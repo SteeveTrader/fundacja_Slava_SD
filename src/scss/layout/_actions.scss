@@ -5,17 +5,17 @@
     @include minWidth;
     box-sizing: border-box;
     background: #588ED6;
-}
 
-.actions__title {
-    text-align: center;
+    h2 {
+          text-align: center;
     @include monserrat(700);
     font-size: 25px;
     line-height: 30px;
-    padding-top: 35;
-    color: $main-color;
-
+    padding-top: 35px;
+    color: $main-color;  
+    }
 }
+
 
 .actions__card-container {
     @include grid;
@@ -58,7 +58,6 @@
 .actions__load-more-btn {
     grid-area: loadbtn;
     cursor: pointer;
-    background: none;
     border: none;
     padding: 16px 40px;
     border-radius: 2px;

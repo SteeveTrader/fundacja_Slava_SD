@@ -4,13 +4,15 @@
 .support {
     @include minWidth;
     box-sizing: border-box;
-}
 
-.support__title {
-    @include monserrat(700);
-    font-size: 25px;
-    line-height: 30px;
-    padding-top: 25px;
+    h2  {
+        text-align: center;
+        @include monserrat(700);
+        font-size: 25px;
+        line-height: 30px;
+        padding-top: 25px;
+        color: $blue-color;
+    }
 }
 
 .support__cards {

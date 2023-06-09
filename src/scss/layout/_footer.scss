@@ -1,0 +1,30 @@
+@import "../abstracts/mixin";
+@import "../abstracts/variables";
+
+.footer {
+    @include minWidth;
+    box-sizing: border-box;
+    background: $blue-color;
+    padding: 35px 10px;
+}
+
+.footer__adres,
+.footer__logo {
+    @include flex(center, center, column);
+    gap: 10px;
+}
+
+.footer__social-media {
+    @include flex;
+    gap: 5px;
+    padding: 10px 0 10px;
+}
+
+.footer__social-media,
+.footer__adres {
+    @include monserrat(500);
+    font-size: 12px;
+    line-height: 14px;
+    text-align: justify;
+    color: $main-color;
+}

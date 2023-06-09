@@ -11,18 +11,18 @@
     background-size: cover;
     background: url('../images/bg.jpg') no-repeat center center;
     padding: 25px 20px;
+
+    h1 {
+        @include monserrat(700);
+        font-size: 25px;
+        line-height: 30px;
+        padding-bottom: 25px;
+    }
 }
 
 .banner__title,
 .banner__text {
     color: $main-color;
-}
-
-.banner__title {
-    @include monserrat(700);
-    font-size: 25px;
-    line-height: 30px;
-    padding-bottom: 25px;
 }
 
 .banner__text {
