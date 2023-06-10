@@ -20,7 +20,6 @@
     grid-column-gap: 14px;
     justify-content: center;
     grid-row-gap: 18px;
-    grid-template-columns: minmax(300px, 1fr);
     grid-template-areas: 
     "bank"
     "title"
@@ -28,6 +27,15 @@
     "card2"
     ;
     padding: 25px 10px;
+
+    @media (min-width: $bp-tablet) {
+        grid-template-areas: 
+        "bank bank"
+        "title title"
+        "card1 card2"
+        ;
+        padding: 28px 15px;
+    } 
 }
 
 .support__cards-bank-account {
@@ -56,7 +64,7 @@
     font-size: 17px;
     line-height: 23px;
     padding: 15px 0 15px;
-    background-color: #FFDF6B;
+    background-color: $background-yellow;
     grid-area: title;
 
 }
@@ -64,7 +72,7 @@
 .support__cards-item1,
 .support__cards-item2 {
     box-sizing: border-box;
-    background-color: #FFDF6B;
+    background-color: $background-yellow;
     padding: 18px;
     gap: 18px;
 

@@ -6,6 +6,19 @@
     box-sizing: border-box;
     background: $blue-color;
     padding: 35px 10px;
+    @include grid;
+    grid-template-areas: 
+    "adres"
+    "sm"
+    "logo"
+    ;
+
+    @media (min-width: $bp-tablet) {
+        grid-template-areas: 
+        "adres logo"
+        "sm logo"
+        ;
+    } 
 }
 
 .footer__adres,
@@ -15,6 +28,7 @@
 }
 
 .footer__social-media {
+    grid-area: sm;
     @include flex;
     gap: 5px;
     padding: 10px 0 10px;
@@ -27,4 +41,12 @@
     line-height: 14px;
     text-align: justify;
     color: $main-color;
+}
+
+.footer__logo {
+    grid-area: logo;
+}
+
+.footer__adres {
+    grid-area: adres;
 }

@@ -14,6 +14,10 @@
         line-height: 30px;
         color: $blue-color;
     }
+
+    @media (min-width: $bp-tablet) {
+        padding: 40px 15px;
+    } 
 }
 
 .constact__form-container {
@@ -34,7 +38,7 @@
     padding: 12px 25px;
     border-radius: 2px;
     box-sizing: border-box;
-    background: #FFDF6B;
+    background: $background-yellow;
     
     font-size: 18px;
     line-height: 20px;
@@ -50,8 +54,7 @@
     padding-bottom: 25px;
 }
 .contact__info-container {
-    @include grid(start);
-    grid-column-gap: 14px;
+    @include grid(center);
     grid-row-gap: 10px;
     grid-template-areas: 
     "icons"
@@ -75,12 +78,13 @@
         line-height: 16px;
         text-align: justify;
         color: $blue-color;
+
     }
 
 }
 
 .contact__info-button {
-    margin-bottom: 20px;
+    margin: 20px 0 20px;
     grid-area: btn;
     cursor: pointer;
 }

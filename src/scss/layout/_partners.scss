@@ -4,7 +4,7 @@
 .partners {
     @include minWidth;
     box-sizing: border-box;
-    background: #FFDF6B;
+    background: $background-yellow;
     padding: 35px 10px;
 
     h3 {
@@ -15,6 +15,10 @@
         padding-bottom: 35px;
         color: $main-color;
     }
+
+    @media (min-width: $bp-tablet) {
+        padding: 40px 15px;
+    } 
 }
 
 

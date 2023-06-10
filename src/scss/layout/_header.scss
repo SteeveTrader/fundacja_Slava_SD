@@ -9,15 +9,10 @@
     padding: 8px 10px 8px 10px;
     background-color: $background-main;
 
-
     @media (min-width: $bp-tablet) {
-        // @include flex(center, center, row);
-        // margin-top: 41px;
+        padding: 8px 15px 8px 15px;
     } 
 
-    @media (min-width: $bp-desktop) {
-        // margin-top: 45px;
-    } 
 }
 
 .heade__logo {
@@ -40,6 +35,15 @@
     @include monserrat(500);
     color: $blue-color;
     cursor: pointer;
+}
+
+.header__social-media {
+    cursor: pointer;
+    display: none;
+    
+    @media (min-width: $bp-tablet) {
+        display: block;
+    } 
 }
 
 .header__burger-menu {
@@ -84,6 +88,11 @@
     width: 17px;
     height: 2px;
     background-color: $background-main;
+
+    @media (min-width: $bp-tablet) {
+        right: 28px;
+    } 
+    
 }
 
 .active {
@@ -100,6 +109,10 @@
     transform: rotate(-45deg);
     transition: transform 0.5s ease; 
     background-color: $background-blue;
+
+    @media (min-width: $bp-tablet) {
+        right: 28px;
+    } 
 }
 
 .active-burger-menu {
@@ -113,20 +126,16 @@
     position: absolute;
     right: 10px;
     top: 50px;
-    width: 190px;
+    width: 250px;
     max-width: 1200px;
-    background-color: rgba(88, 142, 214, 0.8);
+    background-color: rgba(19, 47, 84, 1);
     color: $main-color;
     z-index: 1;
-    // box-sizing: border-box;
+    box-sizing: border-box;
     list-style: none;
 
     @media (min-width: $bp-tablet) {
-        // @include flex (center, center, row);
-        // gap: 33px;
-        // background-color: transparent;
-        // position: static;
-        // padding: 0;
+        right: 15px;
     } 
 
     @media (min-width: $bp-desktop) {
@@ -135,24 +144,19 @@
 
     li {
         @include monserrat(400);
-        font-size: 16px;
-        line-height: 30px;
+        font-size: 15px;
+        line-height: 25px;
         letter-spacing: 1.1px;
         text-transform: uppercase;
         white-space: nowrap;
         box-sizing: border-box;
-        width: 190px;
         padding: 5px 0 8px 13px;
         cursor: pointer;
+        width: 250px;
     }
 
     li:hover {
         background: $background-main;
-
-        @media (min-width: $bp-tablet) {
-            // background: transparent;
-        } 
-
     }
 
     a {

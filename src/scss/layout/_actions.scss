@@ -20,7 +20,7 @@
 .actions__card-container {
     @include grid;
     grid-row-gap: 15px;
-    grid-template-columns: 40px 1fr 40px;
+    // grid-template-columns: 40px 1fr 40px;
     grid-template-areas: 
     "img img img"
     "text text text"
@@ -28,6 +28,17 @@
     ;
     box-sizing: border-box;
     padding: 35px 10px;
+
+    @media (min-width: $bp-tablet) {
+        padding: 38px 15px;   
+        grid-template-areas: 
+        "img img text text"
+        "img img text text"
+        "leftbtn loadbtn loadbtn rightbtn"
+        ;
+        grid-column-gap: 18px;   
+        grid-row-gap: 18px; 
+    } 
 
 }
 
@@ -62,7 +73,7 @@
     padding: 16px 40px;
     border-radius: 2px;
     box-sizing: border-box;
-    background: #FFDF6B;
+    background: $background-yellow;
     color: $blue-color;
     font-size: 18px;
     line-height: 20px;
