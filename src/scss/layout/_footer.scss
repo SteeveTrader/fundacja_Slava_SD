@@ -5,7 +5,9 @@
     @include minWidth;
     box-sizing: border-box;
     background: $blue-color;
-    padding: 35px 10px;
+    padding: 12px 10px;
+    max-width: 1200px;
+    margin: 0 auto;
     @include grid;
     grid-template-areas: 
     "adres"
@@ -18,7 +20,15 @@
         "adres logo"
         "sm logo"
         ;
+        padding: 23px 10px;
     } 
+
+    @media (min-width: $bp-desktop) {
+        grid-template-areas:
+        "adres logo sm"
+        ;
+        padding: 35px 10px;
+    }
 }
 
 .footer__adres,

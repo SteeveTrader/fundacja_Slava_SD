@@ -6,6 +6,9 @@
     box-sizing: border-box;
     background: $background-yellow;
     padding: 35px 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+
 
     h3 {
         text-align: center;
@@ -14,10 +17,20 @@
         line-height: 30px;
         padding-bottom: 35px;
         color: $main-color;
+
+        @media (min-width: $bp-desktop) {
+            font-size: 43px;
+            line-height: 56px;
+            padding-bottom: 50px;
+        }
     }
 
     @media (min-width: $bp-tablet) {
         padding: 40px 15px;
+    } 
+
+    @media (min-width: $bp-desktop) {
+        padding: 63px 25px;
     } 
 }
 
@@ -26,6 +39,10 @@
     list-style: none;
     @include flex(center, center, column);
     gap: 20px;
+
+    @media (min-width: $bp-desktop) {
+        @include flex(center, center, row);
+    } 
 }
 
 .partners__partner-item {
@@ -37,5 +54,10 @@
         height: auto;
         cursor: pointer;
     }
+
+    @media (min-width: $bp-tablet) {
+        flex: 1;
+        flex-basis: 50%;
+    } 
 
 }

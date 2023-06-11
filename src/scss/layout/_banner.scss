@@ -8,7 +8,7 @@
     min-height: 200px;
     max-width: 1200px;
     margin: 0 auto;
-    background-size: cover;
+    background-size: contain;
     background: url('../images/bg.jpg') no-repeat center center;
     padding: 25px 20px;
 
@@ -17,10 +17,22 @@
         font-size: 25px;
         line-height: 30px;
         padding-bottom: 25px;
+
+        @media (min-width: $bp-desktop) {
+            font-size: 43px;
+            line-height: 56px;
+        } 
+
     }
 
     @media (min-width: $bp-tablet) {
-        padding: 50px 28px;
+        padding: 70px 28px;
+    } 
+
+    @media (min-width: $bp-desktop) {
+        font-size: 52px;
+        line-height: 63px;
+        padding: 100px 44px;
     } 
 }
 
@@ -35,4 +47,10 @@
     font-size: 14px;
     line-height: 16px;
     text-align: justify;
+
+    @media (min-width: $bp-desktop) {
+        font-size: 20px;
+        line-height: 26px;      
+    } 
 }
+

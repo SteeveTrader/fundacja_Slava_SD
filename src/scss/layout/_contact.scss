@@ -6,6 +6,8 @@
     box-sizing: border-box;
     background: $main-color;
     padding: 35px 10px;
+    max-width: 1200px;
+    margin: 0 auto;
 
     h3 {
         text-align: center;
@@ -13,10 +15,19 @@
         font-size: 25px;
         line-height: 30px;
         color: $blue-color;
+
+        @media (min-width: $bp-desktop) {
+            font-size: 43px;
+            line-height: 56px;
+        }
     }
 
     @media (min-width: $bp-tablet) {
         padding: 40px 15px;
+    } 
+
+    @media (min-width: $bp-desktop) {
+        padding: 63px 25px;
     } 
 }
 
@@ -40,9 +51,14 @@
     box-sizing: border-box;
     background: $background-yellow;
     
-    font-size: 18px;
-    line-height: 20px;
     @include monserrat(500);
+    font-size: 14px;
+    line-height: 16px;
+
+    @media (min-width: $bp-desktop) {
+        font-size: 19px;
+        line-height: 23px;
+    } 
 
     a {
         color: $blue-color; 
@@ -61,6 +77,13 @@
     "btn"
     "map"
     ;
+
+    @media (min-width: $bp-desktop) {
+        grid-template-areas: 
+        "icons map"
+        "btn map"
+        ;
+    } 
 }
 
 .contact__adress-icons {
@@ -79,6 +102,10 @@
         text-align: justify;
         color: $blue-color;
 
+        @media (min-width: $bp-desktop) {
+            font-size: 19px;
+            line-height: 23px;
+        } 
     }
 
 }
@@ -86,7 +113,6 @@
 .contact__info-button {
     margin: 20px 0 20px;
     grid-area: btn;
-    cursor: pointer;
 }
 
 .contact__adress-map {

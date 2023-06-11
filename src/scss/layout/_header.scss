@@ -4,18 +4,30 @@
 .header {
     @include flex(space-between);
     @include minWidth;
+    margin: 0 auto;
     width: 100%;
     position: relative;
-    padding: 8px 10px 8px 10px;
+    padding: 8px 10px;
+    max-width: 1200px;
     background-color: $background-main;
 
     @media (min-width: $bp-tablet) {
-        padding: 8px 15px 8px 15px;
-    } 
+        padding: 15px 30px;
+    }
+
+    @media (min-width: $bp-desktop) {
+        padding: 20px 15px;
+        position: fixed;
+        z-index: 1;
+        background-color: rgba(88, 142, 214, 0.6);
+        left: 50%;
+        transform: translateX(-50%);
+        // gap: 20px;
+    }
 
 }
 
-.heade__logo {
+.header__logo {
     @include flex;
 
     img {
@@ -28,6 +40,11 @@
 .header__flex-container {
     @include flex;
     gap: 15px;
+
+    @media (min-width: $bp-desktop) {
+        @include flex(space-between);
+        
+    }
 }
 
 .header__language {
@@ -35,15 +52,27 @@
     @include monserrat(500);
     color: $blue-color;
     cursor: pointer;
+
+    @media (min-width: $bp-desktop) {
+        color: $main-color;
+    }
 }
 
 .header__social-media {
     cursor: pointer;
     display: none;
-    
+
     @media (min-width: $bp-tablet) {
         display: block;
-    } 
+    }
+    path {
+        fill:none;
+
+       @media (min-width: $bp-desktop) {
+           fill: #132F54;
+    }
+     
+    }
 }
 
 .header__burger-menu {
@@ -53,10 +82,11 @@
     padding: 17px 13px;
     cursor: pointer;
 
-    @media (min-width: $bp-tablet) {
-        // background-color: transparent;
-        // padding: 0;
-    } 
+    @media (min-width: $bp-desktop) {
+        @include flex(end, center, row);
+        background-color: transparent;
+        padding: 0;
+    }
 }
 
 .header__burger-menu-first-line {
@@ -64,9 +94,11 @@
     width: 17px;
     height: 2px;
 
-    @media (min-width: $bp-tablet) {
-        // display: none;
-    } 
+    @media (min-width: $bp-desktop) {
+        display: none;
+    }
+
+
 }
 
 .header__burger-menu-second-line {
@@ -74,9 +106,9 @@
     width: 17px;
     height: 2px;
 
-    @media (min-width: $bp-tablet) {
-        // display: none;
-    } 
+    @media (min-width: $bp-desktop) {
+        display: none;
+    }
 }
 
 .header__burger-menu-first-line::before {
@@ -90,14 +122,15 @@
     background-color: $background-main;
 
     @media (min-width: $bp-tablet) {
-        right: 28px;
-    } 
-    
+        bottom: 32px;
+        right: 43px;
+    }
+
 }
 
 .active {
     transform: rotate(45deg);
-    transition: transform 0.5s ease; 
+    transition: transform 0.5s ease;
     background-color: $background-blue;
 }
 
@@ -107,16 +140,17 @@
     right: 23px;
     bottom: 31px;
     transform: rotate(-45deg);
-    transition: transform 0.5s ease; 
+    transition: transform 0.5s ease;
     background-color: $background-blue;
 
     @media (min-width: $bp-tablet) {
-        right: 28px;
-    } 
+        right: 43px;
+        bottom: 38px;
+    }
 }
 
 .active-burger-menu {
-    transition: background-color 0.3s ease-in-out; 
+    transition: background-color 0.3s ease-in-out;
     background-color: transparent;
 }
 
@@ -129,55 +163,73 @@
     width: 250px;
     max-width: 1200px;
     background-color: rgba(19, 47, 84, 1);
-    color: $main-color;
     z-index: 1;
     box-sizing: border-box;
     list-style: none;
 
     @media (min-width: $bp-tablet) {
-        right: 15px;
-    } 
+        right: 30px;
+        top: 58px;
+    }
 
     @media (min-width: $bp-desktop) {
-        // gap: 68px;
-    } 
+        @include flex(start);
+        background-color: transparent;
+        position: sticky;
+        width: auto;
+    }
 
     li {
         @include monserrat(400);
         font-size: 15px;
         line-height: 25px;
-        letter-spacing: 1.1px;
         text-transform: uppercase;
         white-space: nowrap;
         box-sizing: border-box;
         padding: 5px 0 8px 13px;
         cursor: pointer;
         width: 250px;
-    }
 
-    li:hover {
-        background: $background-main;
+        @media (min-width: $bp-desktop) {
+            width: auto;
+        }
     }
 
     a {
         text-decoration: none;
         color: $main-color;
+        width: 250px;
+
+        @media (min-width: $bp-tablet) {
+            width: auto;
+        }
+
+        // @media (min-width: $bp-desktop) {
+        //     color: $-color;
+        // }
     }
 
-    a:hover  {
-        color: $blue-color;
+    li:hover {
+        background: $background-main;
+
+        a {
+            color: $blue-color;
+
+            @media (min-width: $bp-desktop) {
+                color: #132F54;
+                
+            }
+        }
+
+        @media (min-width: $bp-desktop) {
+            background-color: transparent;
+
+        }
+
     }
 
 }
 
 .active-wrapper {
     @include flex(center, start, column);
-
-    @media (min-width: $bp-tablet) {
-        // @include flex (center, center, row);
-    } 
 }
-
-
-
-

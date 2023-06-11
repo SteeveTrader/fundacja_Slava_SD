@@ -4,58 +4,91 @@
 .support {
     @include minWidth;
     box-sizing: border-box;
+    max-width: 1200px;
+    margin: 0 auto;
 
-    h2  {
+    h2 {
         text-align: center;
         @include monserrat(700);
         font-size: 25px;
         line-height: 30px;
         padding-top: 25px;
         color: $blue-color;
+
+        @media (min-width: $bp-desktop) {
+            padding-top: 65px;
+            font-size: 43px;
+            line-height: 56px;
+        }
     }
+
 }
 
 .support__cards {
     @include grid;
+    align-items: stretch;
     grid-column-gap: 14px;
     justify-content: center;
     grid-row-gap: 18px;
-    grid-template-areas: 
-    "bank"
-    "title"
-    "card1"
-    "card2"
+    grid-template-areas:
+        "bank"
+        "title"
+        "card1"
+        "card2"
     ;
     padding: 25px 10px;
 
     @media (min-width: $bp-tablet) {
-        grid-template-areas: 
-        "bank bank"
-        "title title"
-        "card1 card2"
+        grid-template-areas:
+            "bank bank"
+            "title title"
+            "card1 card2"
         ;
-        padding: 28px 15px;
-    } 
+        padding: 33px 24px;
+    }
+
+    @media (min-width: $bp-desktop) {
+        grid-template-areas:
+            "bank title title"
+            "bank card1 card2"
+        ;
+        padding: 57px 83px;
+    }
 }
 
 .support__cards-bank-account {
     color: $main-color;
     background: #588ED6;
     grid-area: bank;
+    padding: 20px 25px;
+    box-sizing: border-box;
+
+    @media (min-width: $bp-desktop) {
+        padding: 20px 54px;
+    }
 
 
     div:first-child {
         @include monserrat(500);
         font-size: 15px;
         line-height: 19px;
-        padding: 25px 20px;
+        padding-bottom: 25px;
+
+        @media (min-width: $bp-desktop) {
+            font-size: 20px;
+            line-height: 26px;      
+        } 
     }
 
     div:last-child {
         @include monserrat(700);
         font-size: 17px;
         line-height: 23px;
-        padding-bottom: 20px;
+
+        @media (min-width: $bp-desktop) {
+            font-size: 22px;
+            line-height: 28px;      
+        } 
     }
 }
 
@@ -66,6 +99,11 @@
     padding: 15px 0 15px;
     background-color: $background-yellow;
     grid-area: title;
+
+    @media (min-width: $bp-desktop) {
+        font-size: 20px;
+        line-height: 26px;      
+    } 
 
 }
 
@@ -81,12 +119,22 @@
         @include monserrat(500);
         font-size: 13px;
         line-height: 17px;
+
+        @media (min-width: $bp-desktop) {
+            font-size: 16px;
+            line-height: 21px;      
+        } 
     }
 
     div:last-child {
         @include monserrat(700);
         font-size: 14px;
         line-height: 19px;
+
+        @media (min-width: $bp-desktop) {
+            font-size: 20px;
+            line-height: 26px;      
+        } 
     }
 }
 
