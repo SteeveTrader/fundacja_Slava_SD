@@ -59,4 +59,8 @@
 
 .footer__adres {
     grid-area: adres;
+
+    a {
+        cursor: pointer;
+    }
 }

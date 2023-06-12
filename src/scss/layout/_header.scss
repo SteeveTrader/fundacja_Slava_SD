@@ -12,17 +12,16 @@
     background-color: $background-main;
 
     @media (min-width: $bp-tablet) {
-        padding: 15px 30px;
+        padding: 12px 30px;
     }
 
     @media (min-width: $bp-desktop) {
-        padding: 20px 15px;
+        padding: 8px 30px;
         position: fixed;
         z-index: 1;
         background-color: rgba(88, 142, 214, 0.6);
         left: 50%;
         transform: translateX(-50%);
-        // gap: 20px;
     }
 
 }
@@ -61,13 +60,12 @@
 .header__social-media {
     cursor: pointer;
     display: none;
+    fill: #588ED6;
 
     @media (min-width: $bp-tablet) {
         display: block;
     }
     path {
-        fill:none;
-
        @media (min-width: $bp-desktop) {
            fill: #132F54;
     }
@@ -83,7 +81,7 @@
     cursor: pointer;
 
     @media (min-width: $bp-desktop) {
-        @include flex(end, center, row);
+        display: block;
         background-color: transparent;
         padding: 0;
     }
@@ -116,13 +114,13 @@
     position: absolute;
     content: "";
     right: 23px;
-    bottom: 25px;
+    bottom: 30px;
     width: 17px;
     height: 2px;
     background-color: $background-main;
 
     @media (min-width: $bp-tablet) {
-        bottom: 32px;
+        bottom: 34px;
         right: 43px;
     }
 
@@ -138,14 +136,14 @@
     display: block;
     position: absolute;
     right: 23px;
-    bottom: 31px;
+    bottom: 36px;
     transform: rotate(-45deg);
     transition: transform 0.5s ease;
     background-color: $background-blue;
 
     @media (min-width: $bp-tablet) {
         right: 43px;
-        bottom: 38px;
+        bottom: 40px;
     }
 }
 
@@ -173,7 +171,7 @@
     }
 
     @media (min-width: $bp-desktop) {
-        @include flex(start);
+        @include flex(start, center, row);
         background-color: transparent;
         position: sticky;
         width: auto;
@@ -232,4 +230,9 @@
 
 .active-wrapper {
     @include flex(center, start, column);
+
+    @media (min-width: $bp-desktop) {
+        @include flex(center, start, row);
+
+    }
 }

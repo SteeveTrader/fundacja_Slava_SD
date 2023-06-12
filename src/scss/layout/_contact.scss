@@ -24,17 +24,18 @@
 
     @media (min-width: $bp-tablet) {
         padding: 40px 15px;
-    } 
+    }
 
     @media (min-width: $bp-desktop) {
         padding: 63px 25px;
-    } 
+    }
 }
 
 .constact__form-container {
     @include flex;
     gap: 15px;
     padding: 35px 0 35px;
+
     img {
         width: 25%;
         height: 25%;
@@ -50,7 +51,7 @@
     border-radius: 2px;
     box-sizing: border-box;
     background: $background-yellow;
-    
+
     @include monserrat(500);
     font-size: 14px;
     line-height: 16px;
@@ -58,32 +59,33 @@
     @media (min-width: $bp-desktop) {
         font-size: 19px;
         line-height: 23px;
-    } 
+    }
 
     a {
-        color: $blue-color; 
-        text-decoration: none;        
+        color: $blue-color;
+        text-decoration: none;
     }
 }
 
 .contact__title {
     padding-bottom: 25px;
 }
+
 .contact__info-container {
     @include grid(center);
     grid-row-gap: 10px;
-    grid-template-areas: 
-    "icons"
-    "btn"
-    "map"
+    grid-template-areas:
+        "icons"
+        "btn"
+        "map"
     ;
 
     @media (min-width: $bp-desktop) {
-        grid-template-areas: 
-        "icons map"
-        "btn map"
+        grid-template-areas:
+            "icons map"
+            "btn map"
         ;
-    } 
+    }
 }
 
 .contact__adress-icons {
@@ -105,9 +107,29 @@
         @media (min-width: $bp-desktop) {
             font-size: 19px;
             line-height: 23px;
-        } 
+        }
+
+
     }
 
+    a {
+        @include monserrat(500);
+        font-size: 14px;
+        line-height: 16px;
+        text-align: justify;
+        cursor: pointer;
+        text-decoration: none;
+        color: $blue-color;
+
+        @media (min-width: $bp-desktop) {
+            font-size: 19px;
+            line-height: 23px;
+        }
+    }
+
+    a:hover {
+        color: #132F54;
+    }
 }
 
 .contact__info-button {
