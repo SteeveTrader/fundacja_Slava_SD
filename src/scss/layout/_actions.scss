@@ -63,8 +63,8 @@
 
 .actions__card-image {
     grid-area: img;
-    max-width: 399px;
-    max-height: 100%;
+    max-width: 350px;
+    max-height: 314px;
     width: 100%;
     height: auto;
     border-radius: 2px;
@@ -97,6 +97,12 @@
     font-size: 18px;
     line-height: 20px;
     @include monserrat(500);
+}
+
+.card-post-btn {
+    margin: 0 auto;
+    @include flex;
+    padding: 12px 30px;
 }
 
 

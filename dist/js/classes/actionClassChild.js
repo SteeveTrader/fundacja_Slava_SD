@@ -1,30 +1,15 @@
-class ActionCard {
+import ActionCard from "./ActionClass.js";
+
+export default class ActionCardChild extends ActionCard {
     constructor(src, date, text) {
-        this.src = src;
-        this.date = date;
-        this.text = text;
-        this.container = document.createElement("div");
+        super(src, date, text);
         this.prevBtn = document.createElement("button");
         this.nextBtn = document.createElement("button");
         this.loadMore = document.createElement("button");
     }
 
     createElement() {
-
-        this.container.className = "actions__card-container";
-
-        const html = `
-        <img class="actions__card-image" src="${this.src}" alt="Pomoc humanitarna">
-
-        <div class="actions__card-text">
-        <p>${this.date}</p>
-        <p>
-            ${this.text}
-        </p>
-        </div>
-        `;
-
-        this.container.innerHTML = html;
+        super.createElement();
 
         this.prevBtn.className = "actions__previouse-btn";
         this.prevBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="-240 -960 960 900">
@@ -36,16 +21,12 @@ class ActionCard {
 
         this.loadMore.className = "actions__load-more-btn";
         this.loadMore.innerText = "Pokaż więcej";
+        this.loadMore.onclick = function() {
+            window.location.href = 'indexCardsPost.html';
+          };
+
 
         this.container.prepend(this.prevBtn);
         this.container.append(this.loadMore,  this.nextBtn);
-
-    }
-
-    render (selector) {
-        this.createElement();
-        selector.append(this.container);
     }
 }
-
-export default ActionCard;
