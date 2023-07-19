@@ -1,5 +1,10 @@
 @import "./abstracts/mixin";
 @import "./abstracts/variables";
-@import "./base/defaults";
 @import "./base/reset";
 @import "./layout/header";
+@import "./layout/banner";
+@import "./layout/support";
+@import "./layout/actions";
+@import "./layout/partners";
+@import "./layout/contact";
+@import "./layout/footer";

@@ -38,9 +38,7 @@ const html = () => {
 };
 
 const js = () => {
-    return gulp.src('./src/js/*.js')
-        .pipe(concat('scripts.min.js'))
-        .pipe(terser())
+    return gulp.src('./src/js/**/*.js')
         .pipe(gulp.dest("./dist/js"));
 };
 

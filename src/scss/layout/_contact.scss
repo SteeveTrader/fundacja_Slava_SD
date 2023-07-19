@@ -1,0 +1,145 @@
+@import "../abstracts/mixin";
+@import "../abstracts/variables";
+
+.contact {
+    @include minWidth;
+    box-sizing: border-box;
+    background: $main-color;
+    padding: 35px 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    h3 {
+        text-align: center;
+        @include monserrat(700);
+        font-size: 25px;
+        line-height: 30px;
+        color: $blue-color;
+
+        @media (min-width: $bp-desktop) {
+            font-size: 43px;
+            line-height: 56px;
+        }
+    }
+
+    @media (min-width: $bp-tablet) {
+        padding: 40px 15px;
+    }
+
+    @media (min-width: $bp-desktop) {
+        padding: 63px 25px;
+    }
+}
+
+.constact__form-container {
+    @include flex;
+    gap: 15px;
+    padding: 35px 0 35px;
+
+    img {
+        width: 25%;
+        height: 25%;
+    }
+
+}
+
+.contact__form-button,
+.contact__info-button {
+    cursor: pointer;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 2px;
+    box-sizing: border-box;
+    background: $background-yellow;
+
+    @include monserrat(500);
+    font-size: 14px;
+    line-height: 16px;
+
+    @media (min-width: $bp-desktop) {
+        font-size: 19px;
+        line-height: 23px;
+    }
+
+    a {
+        color: $blue-color;
+        text-decoration: none;
+    }
+}
+
+.contact__title {
+    padding-bottom: 25px;
+}
+
+.contact__info-container {
+    @include grid(center);
+    grid-row-gap: 10px;
+    grid-template-areas:
+        "icons"
+        "btn"
+        "map"
+    ;
+
+    @media (min-width: $bp-desktop) {
+        grid-template-areas:
+            "icons map"
+            "btn map"
+        ;
+    }
+}
+
+.contact__adress-icons {
+    grid-area: icons;
+}
+
+.contact__adress-icon {
+    @include flex(start, center);
+    gap: 15px;
+    padding-bottom: 10px;
+
+    p {
+        @include monserrat(500);
+        font-size: 14px;
+        line-height: 16px;
+        text-align: justify;
+        color: $blue-color;
+
+        @media (min-width: $bp-desktop) {
+            font-size: 19px;
+            line-height: 23px;
+        }
+
+
+    }
+
+    a {
+        @include monserrat(500);
+        font-size: 14px;
+        line-height: 16px;
+        text-align: justify;
+        cursor: pointer;
+        text-decoration: none;
+        color: $blue-color;
+
+        @media (min-width: $bp-desktop) {
+            font-size: 19px;
+            line-height: 23px;
+        }
+    }
+
+    a:hover {
+        color: #132F54;
+    }
+}
+
+.contact__info-button {
+    margin: 20px 0 20px;
+    grid-area: btn;
+}
+
+.contact__adress-map {
+    grid-area: map;
+    width: 300px;
+    height: 280px;
+    border: none;
+}

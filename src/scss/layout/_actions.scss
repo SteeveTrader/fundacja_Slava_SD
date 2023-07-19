@@ -1,0 +1,127 @@
+@import "../abstracts/mixin";
+@import "../abstracts/variables";
+
+.actions {
+    @include minWidth;
+    box-sizing: border-box;
+    background: #588ED6;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    h2 {
+        text-align: center;
+        @include monserrat(700);
+        font-size: 25px;
+        line-height: 30px;
+        padding-top: 35px;
+        color: $main-color;
+
+        @media (min-width: $bp-desktop) {
+            font-size: 43px;
+            line-height: 56px;
+            padding-top: 65px;
+        }
+
+    }
+
+
+}
+
+
+.actions__card-container {
+    @include grid;
+    grid-row-gap: 15px;
+    grid-template-areas:
+        "img img img"
+        "text text text"
+        "leftbtn loadbtn rightbtn"
+    ;
+    box-sizing: border-box;
+    padding: 35px 10px;
+
+    @media (min-width: $bp-tablet) {
+        padding: 38px 15px;
+        grid-template-areas:
+            "img img text text"
+            "img img text text"
+            "leftbtn loadbtn loadbtn rightbtn"
+        ;
+        grid-column-gap: 18px;
+        grid-row-gap: 18px;
+        
+    }
+
+    @media (min-width: $bp-desktop) {
+        grid-template-areas:
+            "leftbtn img text rightbtn"
+            "leftbtn img loadbtn  rightbtn"
+        ;
+        padding: 43px 25px;
+    }
+
+}
+
+.actions__card-image {
+    grid-area: img;
+    max-width: 350px;
+    max-height: 314px;
+    width: 100%;
+    height: auto;
+    border-radius: 2px;
+}
+
+.actions__card-text {
+    @include flex(center, start, column);
+    @include monserrat(500);
+    gap: 16px;
+    font-size: 15px;
+    line-height: 18px;
+    color: $main-color;
+    grid-area: text;
+    max-width: 399px;
+
+    p:last-child {
+        opacity: 0.7;
+    }
+}
+
+.actions__load-more-btn {
+    grid-area: loadbtn;
+    cursor: pointer;
+    border: none;
+    padding: 16px 40px;
+    border-radius: 2px;
+    box-sizing: border-box;
+    background: $background-yellow;
+    color: $blue-color;
+    font-size: 18px;
+    line-height: 20px;
+    @include monserrat(500);
+}
+
+.card-post-btn {
+    margin: 0 auto;
+    @include flex;
+    padding: 12px 30px;
+}
+
+
+
+// .actions__previouse-btn {
+//     grid-area: leftbtn;
+//     cursor: pointer;
+//     background: none;
+//     border: none;
+//     height: 50px;
+//     width: 50px;
+// }
+
+
+// .actions__next-btn {
+//     grid-area: rightbtn;
+//     cursor: pointer;
+//     background: none;
+//     border: none;
+//     height: 50px;
+//     width: 50px;
+// }

@@ -1,0 +1,66 @@
+@import "../abstracts/mixin";
+@import "../abstracts/variables";
+
+.footer {
+    @include minWidth;
+    box-sizing: border-box;
+    background: $blue-color;
+    padding: 12px 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+    @include grid;
+    grid-template-areas: 
+    "adres"
+    "sm"
+    "logo"
+    ;
+
+    @media (min-width: $bp-tablet) {
+        grid-template-areas: 
+        "adres logo"
+        "sm logo"
+        ;
+        padding: 23px 10px;
+    } 
+
+    @media (min-width: $bp-desktop) {
+        grid-template-areas:
+        "adres logo sm"
+        ;
+        padding: 35px 10px;
+    }
+}
+
+.footer__adres,
+.footer__logo {
+    @include flex(center, center, column);
+    gap: 10px;
+}
+
+.footer__social-media {
+    grid-area: sm;
+    @include flex;
+    gap: 5px;
+    padding: 10px 0 10px;
+}
+
+.footer__social-media,
+.footer__adres {
+    @include monserrat(500);
+    font-size: 12px;
+    line-height: 14px;
+    text-align: justify;
+    color: $main-color;
+}
+
+.footer__logo {
+    grid-area: logo;
+}
+
+.footer__adres {
+    grid-area: adres;
+
+    a {
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,63 @@
+@import "../abstracts/mixin";
+@import "../abstracts/variables";
+
+.partners {
+    @include minWidth;
+    box-sizing: border-box;
+    background: $background-yellow;
+    padding: 35px 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+
+    h3 {
+        text-align: center;
+        @include monserrat(700);
+        font-size: 25px;
+        line-height: 30px;
+        padding-bottom: 35px;
+        color: $main-color;
+
+        @media (min-width: $bp-desktop) {
+            font-size: 43px;
+            line-height: 56px;
+            padding-bottom: 50px;
+        }
+    }
+
+    @media (min-width: $bp-tablet) {
+        padding: 40px 15px;
+    } 
+
+    @media (min-width: $bp-desktop) {
+        padding: 64px 25px;
+    } 
+}
+
+
+.partners__container {
+    list-style: none;
+    @include flex(center, center, column);
+    gap: 20px;
+
+    @media (min-width: $bp-desktop) {
+        @include flex(center, center, row);
+    } 
+}
+
+.partners__partner-item {
+
+    img {
+        max-width: 280px;
+        max-height: 200px;
+        width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    @media (min-width: $bp-tablet) {
+        flex: 1;
+        flex-basis: 50%;
+    } 
+
+}

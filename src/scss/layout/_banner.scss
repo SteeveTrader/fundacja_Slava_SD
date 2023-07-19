@@ -1,0 +1,56 @@
+@import "../abstracts/mixin";
+@import "../abstracts/variables";
+
+.banner {
+    @include minWidth;
+    box-sizing: border-box;
+    min-width: 320px;
+    min-height: 200px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-size: contain;
+    background: url('../images/bg.jpg') no-repeat center center;
+    padding: 25px 20px;
+
+    h1 {
+        @include monserrat(700);
+        font-size: 25px;
+        line-height: 30px;
+        padding-bottom: 25px;
+
+        @media (min-width: $bp-desktop) {
+            font-size: 43px;
+            line-height: 56px;
+        } 
+
+    }
+
+    @media (min-width: $bp-tablet) {
+        padding: 70px 28px;
+    } 
+
+    @media (min-width: $bp-desktop) {
+        font-size: 52px;
+        line-height: 63px;
+        padding: 100px 44px;
+    } 
+}
+
+
+.banner__title,
+.banner__text {
+    color: $main-color;
+}
+
+.banner__text {
+    @include monserrat(500);
+    font-size: 14px;
+    line-height: 16px;
+    text-align: justify;
+
+    @media (min-width: $bp-desktop) {
+        font-size: 20px;
+        line-height: 26px;      
+    } 
+}
+
