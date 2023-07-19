@@ -26,7 +26,7 @@ class ActionCard {
 
     render (selector) {
         this.createElement();
-        selector.prepend(this.container);
+        selector.append(this.container);
     }
 }
 

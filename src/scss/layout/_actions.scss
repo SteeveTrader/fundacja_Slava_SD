@@ -19,7 +19,7 @@
         @media (min-width: $bp-desktop) {
             font-size: 43px;
             line-height: 56px;
-            padding: 65px;
+            padding-top: 65px;
         }
 
     }
@@ -107,21 +107,21 @@
 
 
 
-.actions__previouse-btn {
-    grid-area: leftbtn;
-    cursor: pointer;
-    background: none;
-    border: none;
-    height: 50px;
-    width: 50px;
-}
+// .actions__previouse-btn {
+//     grid-area: leftbtn;
+//     cursor: pointer;
+//     background: none;
+//     border: none;
+//     height: 50px;
+//     width: 50px;
+// }
 
 
-.actions__next-btn {
-    grid-area: rightbtn;
-    cursor: pointer;
-    background: none;
-    border: none;
-    height: 50px;
-    width: 50px;
-}
+// .actions__next-btn {
+//     grid-area: rightbtn;
+//     cursor: pointer;
+//     background: none;
+//     border: none;
+//     height: 50px;
+//     width: 50px;
+// }
